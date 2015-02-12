@@ -1,0 +1,11 @@
+Start: Tue, 11 Feb 2015 18:00:00 -800
+End: Tue, 11 Feb 2015 19:30:00 -800
+Tasks: Throrough reading of git assignment README, Initialized git repo.
+
+Start: Mon, 12 Feb 2015 22:00:00 -800
+End: Mon, 12 Feb 2015 11:58:00 -800
+Tasks: Wrote basic html form for post to one.php (working title), which script inserts input values.
+
+Start: Mon, 12 Feb 2015 22:00:00 -800
+End: Mon, 12 Feb 2015 11:58:00 -800
+Tasks: 
