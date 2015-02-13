@@ -7,7 +7,7 @@ elseif ($_POST['del'] == "1") {
 
 
 function buildtable($cats=null, $add=null, $inout=null, $del=null) {
-     $conn = new mysqli('localhost', 'emg', 'gullie06', 'uno_db');
+     $conn = new mysqli('localhost', 'uname', 'pass', 'uno_db');
     if($conn->connect_error){
         
     }
