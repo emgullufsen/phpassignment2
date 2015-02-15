@@ -3,9 +3,17 @@ End: Tue, 10 Feb 2015 19:30:00 -800
 Tasks: Throrough reading of git assignment README, Initialized git repo.
 
 Start: Wed, 11 Feb 2015 22:00:00 -800
-End: Wed, 11 Feb 2015 11:58:00 -800
+End: Wed, 11 Feb 2015 23:58:00 -800
 Tasks: Wrote basic html form for post to one.php (working title), which script inserts input values.
 
 Start: Thurs, 12 Feb 2015 22:00:00 -800
-End: Mon, 12 Feb 2015 11:58:00 -800
+End: Thurs, 12 Feb 2015 23:58:00 -800
 Tasks: spent time carefully outlining project, added one.js, outlined AJAX calls and one.php to receive them.
+
+Start: Sat, 14 Feb 2015 16:00:00 -800
+End: Sat, 14 Feb 2015 23:59:59 -800
+Tasks: Wrote JavaScript functions in one.js that make asynchronous requests to one.php, wrote handlers in one.php for several of these AJAX requests.
+
+Start: Sun, 15 Feb 2015 00:00:00 -800
+End: Sun, 15 Feb 2015 03:08:00 -800
+Tasks: changed to prepared statements for several queries, added filtering by category (which took the majority of this time block to dial-in).
