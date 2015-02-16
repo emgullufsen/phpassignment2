@@ -2,6 +2,7 @@
 
 function fresh(num){
 	// make AJAX call to one.php (post) passing params indicating we want the table.
+	
 	var xm = new XMLHttpRequest();
 	xm.onreadystatechange = function() {
 		if (xm.readyState == 4){
@@ -14,7 +15,28 @@ function fresh(num){
 		$codicil = 'callingfunction=fresh1';
 	}
 	else if (num == 2){
+		if (!((document.getElementById("name").value != "") && (document.getElementById("length").value != "") && (document.getElementById("category").value != ""))){
+			var stringy = "The following fields were left blank:\n";
+			var strarr = new Array("name", "length", "category");
+			for (var i = 0; i < 3; i++){
+				if(document.getElementById(strarr[i]).value == ""){
+					stringy += strarr[i] + "\n";
+				}
+			}
+			alert(stringy);
+			return;
+		}
+		
+		if (isNaN(document.getElementById("length").value) || (parseInt(document.getElementById("length").value) <= 0)){
+			alert('length of movie must be positive integer (minutes)');
+			return;
+		}
+		
 		$codicil = 'callingfunction=fresh2&' + 'vname=' + document.getElementById("name").value + '&category=' + document.getElementById("category").value + '&length=' +document.getElementById("length").value; 
+	}
+	else if (num == 3){
+		
+		$codicil = 'callingfunction=fresh3';
 	}
 	
 	xm.send($codicil);		

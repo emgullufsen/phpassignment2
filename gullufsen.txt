@@ -17,3 +17,8 @@ Tasks: Wrote JavaScript functions in one.js that make asynchronous requests to o
 Start: Sun, 15 Feb 2015 00:00:00 -800
 End: Sun, 15 Feb 2015 03:08:00 -800
 Tasks: changed to prepared statements for several queries, added filtering by category (which took the majority of this time block to dial-in).
+
+Start: Sun, 15 Feb 2015 16:15:00 -800
+End: Sun, 15 Feb 2015 18:37:00 -800
+Tasks: added error handling in JavaScript so as not to unnecessarily post to server -
+ftp'd to flip - and... DONE!

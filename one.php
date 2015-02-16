@@ -1,6 +1,6 @@
 <?php
 ini_set('display_errors', 'On');
-require '/nfs/stak/students/g/gullufse/public_html/phpassignment2/information.php';
+require 'information.php';//'/nfs/stak/students/g/gullufse/public_html/phpassignment2/information.php';
 
 if($_POST['callingfunction'] == 'fresh2'){
 	
@@ -48,6 +48,19 @@ elseif($_POST['callingfunction'] == 'delone'){
 	
 	$mi3->kill($th3);
 	$mi3->close();
+}
+else if ($_POST['callingfunction'] == 'fresh3'){
+	$mila = new mysqli($lh, $username, $password, $db);
+	if ($mila->connect_error){
+		echo "noconnect" . mysqli_connect_error() . $mila->errno;
+		return;
+	}
+	
+	$t = $mila->thread_id;
+	
+	$q = "TRUNCATE TABLE videos";
+	
+	$mila->query($q);
 }
 
 buildtable($lh, $username, $password, $db);
