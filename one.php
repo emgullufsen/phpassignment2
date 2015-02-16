@@ -1,8 +1,9 @@
 <?php
 ini_set('display_errors', 'On');
-include 'information.php';
+require '/nfs/stak/students/g/gullufse/public_html/phpassignment2/information.php';
 
 if($_POST['callingfunction'] == 'fresh2'){
+	
 	$mi1 = new mysqli($lh, $username, $password, $db);
 	if ($mi1->connect_error){
 		echo "noconnect" . mysqli_connect_error() . $mi1->errno;
@@ -21,7 +22,7 @@ if($_POST['callingfunction'] == 'fresh2'){
 	$stmt->close();
 }
 elseif($_POST['callingfunction'] == 'delone'){
-	$mi3 = new mysqli('localhost','emg','gullie06','uno_db');
+	$mi3 = new mysqli($lh, $username, $password, $db);
 	if ($mi3->connect_error){
 		echo "noconnect" . mysqli_connect_error() . $mi1->errno;
 	}
@@ -49,10 +50,10 @@ elseif($_POST['callingfunction'] == 'delone'){
 	$mi3->close();
 }
 
-buildtable();
+buildtable($lh, $username, $password, $db);
 
-function buildtable() {
-    $mi2 = new mysqli('localhost','emg', 'gullie06','uno_db');
+function buildtable($lh, $un, $pass, $db) {
+    $mi2 = new mysqli($lh, $un, $pass, $db);
     if ($mi2->connect_error){
         echo "noconnect" . mysqli_connect_error() . $mi2->errno;
         return;
@@ -76,7 +77,7 @@ function buildtable() {
     	$query = 'select * from videos';
     	$result = $mi2->query($query);
     }
-    
+
     echo '<table>';
     while ($row = $result->fetch_assoc()){
     	echo '<tr id="' . $row['id'] . '"><td>' . $row['id'] . '</td><td>' . $row['vname'] . '</td><td>' . $row['category'] . '</td><td>' . $row['length']; 
@@ -93,7 +94,7 @@ function buildtable() {
 }
 
 echo '<select id="selector" onchange="filter()"><option value="allmovies">All Movies</option>';
-$mysqli = new mysqli('localhost','emg', 'gullie06','uno_db');
+$mysqli = new mysqli($lh, $username, $password, $db);
 if ($mysqli->connect_error){
 	echo "noconnect" . mysqli_connect_error() . $mysqli->errno;
 }
